@@ -1,0 +1,50 @@
+td, th {
+    border: 1px solid;
+    }
+
+caption{
+        border: 1px solid;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .center{
+        text-align: center;
+    }
+    
+    table {
+        border: 1px solid;
+    width: 90%;
+    border-collapse: collapse;
+    }
+    
+    @media only screen and (min-width: 768px) {
+        .respon{
+            font-size: 50px;
+            text-align: center;
+        }
+        .responfooter{
+            font-size: 35px;
+            text-align: center;
+        }
+      }
+      @media only screen and (min-width: 600px) {
+        .respon{
+            font-size: 40px;
+            text-align: center;
+        }
+        .responfooter{
+            font-size: 25px;
+            text-align: center;
+        }
+      }
+      @media only screen and (min-width: 1000px) {
+        .respon{
+            font-size: 60px;
+            text-align: center;
+        }
+        .responfooter{
+            font-size: 45px;
+            text-align: center;
+        }
+      }
