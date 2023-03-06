@@ -40,3 +40,9 @@ const navSlide = () => {
   };
   
   navSlide();
+
+  if (window.location.pathname.endsWith('.html')) {
+    var newUrl = window.location.pathname.replace('.html', '');
+    window.location.href = newUrl;
+  }
+  
