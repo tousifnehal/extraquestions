@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteCond %{} !-d
+RewriteCond %{index}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+
+RewriteEngine on
+RewriteCond %{bangla} !-d
+RewriteCond %{bangla}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
