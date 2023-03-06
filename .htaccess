@@ -1,4 +1,4 @@
 RewriteEngine on
-RewriteCond %{bangla} !-d
-RewriteCond %{bangla}\.html -f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
