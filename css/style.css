@@ -1,6 +1,6 @@
-a{
+.url{
     text-decoration: none;
-    color: red;
+    color: rgb(226, 92, 92);
 }
 * {
 box-sizing: border-box;
@@ -10,3 +10,30 @@ font-family: "Comfortaa","Comic Sans MS", sans-serif, cursive;
 
 }
 
+/* Style the select box */
+select {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  /* Style the text input */
+  input {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  /* Style the submit button */
+  button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style the submit button on hover */
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
