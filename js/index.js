@@ -57,7 +57,7 @@ var url = `https://panjeree.com/c09/${list.value}q${number.value}.pdf`
     alert('Please enter a 4-digit number.');
   } else if(enteredNumber.length < 4) {
  alert('Please enter a 4-digit number.');
-  }
+  };
   }
 
   function showSelected() {
