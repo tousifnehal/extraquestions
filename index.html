@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/responsive.css">
   <link rel="stylesheet" href="./css/navbar.css">
-  <link rel="stylesheet" href="/css/content.css">
+  <link rel="stylesheet" href="/css/footer.css">
 <link rel="shortcut icon" href="/assets/favicon-32x32.png" type="image/x-icon">
 
 <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
@@ -60,20 +60,120 @@
 <center><h1>Welcome To Extra Questions</h1></center><br><br><br><br>
 <center><h4>Please Use This Menu For Quick Searching</h4></center><br><br>
 <center>
-<select id="list" onchange="showSelected()">
-  <option value="">Select One</option>
-  <option value="phy">Physics</option>
-  <option value="bio">Biology</option>
-  <option value="bgs">BGS</option>
-</select>
-<input type="number" id="number" name="number" placeholder="Enter 4 Digit Number" pattern="[0-9]{4}" disabled required >
-<button onclick="search()">Search</button><br><br>
-<p class="url">For Bangla, Check It Out From Navigation Bar</p>
+
+  <select id="mainDropdown" onchange="showSelected()">
+    <option value="">Select Subject</option>
+    <option value="bn">Bangla</option>
+    <option value="phy">Physics</option>
+    <option value="bio">Biology</option>
+    <option value="bgs">BGS</option>
+  </select>
+  
+  <select id="subDropdown" disabled onchange="showSelected()">
+    <option value="">Select Chapter</option>
+  </select><br><br>
+  <p class="url">After Selecting The Chapter; You Will be Automaticly Re-Directed To The Chapter Extra Questions</p>
+  
+<script>
+    function showSelected() {
+    var select = document.getElementById("mainDropdown");
+    var select = document.getElementById("subDropdown");
+    var selectedOption = select.options[select.selectedIndex].value;
+  
+    if (selectedOption == "")  
+      select.options[0].disabled = true;
+    }
+  
+
+  const mainDropdown = document.getElementById('mainDropdown');
+const subDropdown = document.getElementById('subDropdown');
+
+mainDropdown.addEventListener('change', function() {
+  const selectedValue = mainDropdown.value;
+  
+  // clear the sub dropdown and disable it
+  subDropdown.innerHTML = '';
+  subDropdown.disabled = true;
+  
+  // enable the sub dropdown and show the appropriate options
+  if (selectedValue === 'bn') {
+    subDropdown.disabled = false;
+    const options = [
+      { value: 'list1option1', text: 'List 1 Option 1' },
+      { value: 'list1option2', text: 'List 1 Option 2' },
+      { value: 'list1option3', text: 'List 1 Option 3' },
+      { value: 'list1option4', text: 'List 1 Option 4' },
+      { value: 'list1option5', text: 'List 1 Option 5' }
+    ];
+    for (let option of options) {
+      const optionElement = document.createElement('option');
+      optionElement.value = option.value;
+      optionElement.textContent = option.text;
+      subDropdown.appendChild(optionElement);
+    }
+  } else if (selectedValue === 'phy') {
+    subDropdown.disabled = false;
+    const options = [
+      { value: 'list2option1', text: 'List 2 Option 1' },
+      { value: 'list2option2', text: 'List 2 Option 2' },
+      { value: 'list2option3', text: 'List 2 Option 3' },
+      { value: 'list2option4', text: 'List 2 Option 4' },
+      { value: 'list2option5', text: 'List 2 Option 5' },
+      { value: 'list2option6', text: 'List 2 Option 6' }
+    ];
+    for (let option of options) {
+      const optionElement = document.createElement('option');
+      optionElement.value = option.value;
+      optionElement.textContent = option.text;
+      subDropdown.appendChild(optionElement);
+    }
+  }else if (selectedValue === 'bio') {
+    subDropdown.disabled = false;
+    const options = [
+      { value: 'list2option1', text: 'List 2 Option 1' },
+      { value: 'list2option2', text: 'List 2 Option 2' },
+      { value: 'list2option3', text: 'List 2 Option 3' },
+      { value: 'list2option4', text: 'List 2 Option 4' },
+      { value: 'list2option5', text: 'List 2 Option 5' },
+      { value: 'list2option6', text: 'List 2 Option 6' }
+    ];
+    for (let option of options) {
+      const optionElement = document.createElement('option');
+      optionElement.value = option.value;
+      optionElement.textContent = option.text;
+      subDropdown.appendChild(optionElement);
+    }}
+    else if (selectedValue === 'bgs') {
+    subDropdown.disabled = false;
+    const options = [
+      { value: 'list2option1', text: 'List 2 Option 1' },
+      { value: 'list2option2', text: 'List 2 Option 2' },
+      { value: 'list2option3', text: 'List 2 Option 3' },
+      { value: 'list2option4', text: 'List 2 Option 4' },
+      { value: 'list2option5', text: 'List 2 Option 5' },
+      { value: 'list2option6', text: 'List 2 Option 6' }
+    ];
+    for (let option of options) {
+      const optionElement = document.createElement('option');
+      optionElement.value = option.value;
+      optionElement.textContent = option.text;
+      subDropdown.appendChild(optionElement);
+    }}
+});
+
+subDropdown.addEventListener('change', function() {
+  const selectedValue = subDropdown.value;
+
+  window.location.href = `https://panjeree.com/c09/${selectedValue}.pdf`;
+});
+
+</script>
+
 </center>
 
   </div>
 <footer class="w3-center w3-black w3-padding-16 w3-bottom">
-  <p>Powered by <a href="/index.html"  target="_blank" class="w3-hover-text-green url">Caution_Gamer.</a> © <a  target="_blank" class="w3-hover-text-green url" href="https://panjeree.com/">Panjeree Publications LTD. </a>  Co-Oparated With <a  target="_blank" class="w3-hover-text-green url" href="https://farhanibnesaif.vercel.app/">Farhan Ibne Saif</a></a> </p>
+  <p>Powered by <a href="/index.html"  target="_blank" class="w3-hover-text-green url">Caution_Gamer.</a> © <a  target="_blank" class="w3-hover-text-green url" href="https://panjeree.com/">Panjeree Publications LTD. </a> </p>
 </footer>
 </body>
 </html>
