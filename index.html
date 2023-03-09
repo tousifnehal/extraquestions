@@ -180,7 +180,7 @@
             } else if (selectedValue === "bio") {
               subDropdown.disabled = false;
               const options = [
-              { value: "", text: "Select Chapter" },
+                { value: "", text: "Select Chapter" },
                 { value: "bioq0123", text: "জীবন পাঠ" },
                 { value: "bioq0223", text: "জীবকোষ এবং টিস্যু" },
                 { value: "bioq0323", text: "কোষবিভাজন" },
@@ -205,12 +205,44 @@
             } else if (selectedValue === "bgs") {
               subDropdown.disabled = false;
               const options = [
-                { value: "list2option1", text: "List 2 Option 1" },
-                { value: "list2option2", text: "List 2 Option 2" },
-                { value: "list2option3", text: "List 2 Option 3" },
-                { value: "list2option4", text: "List 2 Option 4" },
-                { value: "list2option5", text: "List 2 Option 5" },
-                { value: "list2option6", text: "List 2 Option 6" },
+                { value: "", text: "Select Chapter" },
+                {
+                  value: "bgsq0123",
+                  text: "পূর্ব বাংলার আন্দোলন ও জাতীয়তাবাদের উত্থান (1947-1970)",
+                },
+                { value: "bgsq0223", text: "স্বাধীন বাংলাদেশ" },
+                { value: "bgsq0323", text: "সৌরজগৎ ও ভূমণ্ডল" },
+                { value: "bgsq0423", text: "বাংলাদেশের ভূপ্রকৃতি ও জলবায়ু" },
+                {
+                  value: "bgsq0523",
+                  text: "বাংলাদেশের নদ-নদী ও প্রাকৃতিক সম্পদ",
+                },
+                { value: "bgsq0623", text: "রাষ্ট্র, নাগরিকতা ও আইন" },
+                {
+                  value: "bgsq0723",
+                  text: "বাংলাদেশ সরকারের বিভিন্ন অঙ্গ ও প্রশাসনিক ব্যবস্থা",
+                },
+                { value: "bgsq0823", text: "বাংলাদেশের গণতন্ত্র ও নির্বাচন" },
+                { value: "bgsq0923", text: "জাতিসংঘ ও বাংলাদেশ" },
+                { value: "bgsq1023", text: "টেকসই উন্নয়ন অভীষ্ট (SDG)" },
+                { value: "bgsq1123", text: "জাতীয় সম্পদ ও অর্থনৈতিক ব্যবস্থা" },
+                {
+                  value: "bgsq1223",
+                  text: "অর্থনৈতিক নির্দেশক সমূহ ও বাংলাদেশের অর্থনৈতিক প্রকৃতি",
+                },
+                {
+                  value: "bgsq1323",
+                  text: "বাংলাদেশ সরকারের অর্থ ও ব্যাংক ব্যবস্থা",
+                },
+                {
+                  value: "bgsq1423",
+                  text: "বাংলাদেশের পরিবার কাঠামো ও সামাজিকীকরণ",
+                },
+                { value: "bgsq1523", text: "বাংলাদেশের সামাজিক পরিবর্তন" },
+                {
+                  value: "bgsq1623",
+                  text: "বাংলাদেশের সামাজিক সমস্যা ও এর প্রতিকার",
+                },
               ];
               for (let option of options) {
                 const optionElement = document.createElement("option");
@@ -223,7 +255,8 @@
 
           subDropdown.addEventListener("change", function () {
             const selectedValue = subDropdown.value;
-            window.location.href = `https://panjeree.com/c09/${selectedValue}.pdf`;
+            let url = `https://panjeree.com/c09/${selectedValue}.pdf`;
+            window.open(url, "_blank");
             setInterval(function () {
               location.reload();
             }, 2000);
