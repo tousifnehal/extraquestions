@@ -88,10 +88,9 @@
           <option value="">Select Chapter</option></select
         ><br /><br />
         <p class="url">
-          After Selecting The Chapter; You Will be Automaticly Re-Directed To
-          The Chapter Extra Questions
+          After Selecting The Chapter; You Will Automaticly Re-Directed To
+          The Chapter's Extra Questions
         </p>
-
         <script>
           const mainDropdown = document.getElementById("mainDropdown");
           const subDropdown = document.getElementById("subDropdown");
@@ -153,12 +152,20 @@
             } else if (selectedValue === "phy") {
               subDropdown.disabled = false;
               const options = [
-                { value: "list2option1", text: "List 2 Option 1" },
-                { value: "list2option2", text: "List 2 Option 2" },
-                { value: "list2option3", text: "List 2 Option 3" },
-                { value: "list2option4", text: "List 2 Option 4" },
-                { value: "list2option5", text: "List 2 Option 5" },
-                { value: "list2option6", text: "List 2 Option 6" },
+                { value: "phyq0123", text: "ভৌত রাশি এবং পরিমাপ" },
+                { value: "phyq0223", text: "গতি" },
+                { value: "phyq0323", text: "বল" },
+                { value: "phyq0423", text: "কাজ, ক্ষমতা ও শক্তি" },
+                { value: "phyq0523", text: "পদার্থের অবস্থা ও চাপ" },
+                { value: "phyq0623", text: "বস্তুর উপর তাপের প্রভাব" },
+                { value: "phyq0723", text: "তরঙ্গ ও শব্দ" },
+                { value: "phyq0823", text: "আলোর প্রতিফলন" },
+                { value: "phyq0923", text: "আলোর প্রতিসরণ" },
+                { value: "phyq1023", text: "স্থির বিদ্যুৎ" },
+                { value: "phyq1123", text: "চল বিদ্যুৎ" },
+                { value: "phyq1223", text: "বিদ্যুতের চৌম্বক ক্রিয়া" },
+                { value: "phyq1323", text: "আধুনিক পদার্থবিজ্ঞান ও ইলেকট্রনিক্স" },
+                { value: "phyq1423", text: "জীবন বাঁচাতে পদার্থ বিজ্ঞান" },
               ];
               for (let option of options) {
                 const optionElement = document.createElement("option");
@@ -214,7 +221,7 @@
     <footer class="w3-center w3-black w3-padding-16 w3-bottom">
       <p>
         Powered by
-        <a href="/index.html" target="_blank" class="w3-hover-text-green url"
+        <a href="/index.html" class="w3-hover-text-green url"
           >Caution_Gamer.</a
         >
         ©
