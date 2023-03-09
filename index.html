@@ -88,8 +88,8 @@
           <option value="">Select Chapter</option></select
         ><br /><br />
         <p class="url">
-          After Selecting The Chapter; You Will Automaticly Re-Directed To
-          The Chapter's Extra Questions
+          After Selecting The Chapter; You Will Automaticly Re-Directed To The
+          Chapter's Extra Questions
         </p>
         <script>
           const mainDropdown = document.getElementById("mainDropdown");
@@ -152,6 +152,7 @@
             } else if (selectedValue === "phy") {
               subDropdown.disabled = false;
               const options = [
+                { value: "", text: "Select Chapter" },
                 { value: "phyq0123", text: "ভৌত রাশি এবং পরিমাপ" },
                 { value: "phyq0223", text: "গতি" },
                 { value: "phyq0323", text: "বল" },
@@ -164,7 +165,10 @@
                 { value: "phyq1023", text: "স্থির বিদ্যুৎ" },
                 { value: "phyq1123", text: "চল বিদ্যুৎ" },
                 { value: "phyq1223", text: "বিদ্যুতের চৌম্বক ক্রিয়া" },
-                { value: "phyq1323", text: "আধুনিক পদার্থবিজ্ঞান ও ইলেকট্রনিক্স" },
+                {
+                  value: "phyq1323",
+                  text: "আধুনিক পদার্থবিজ্ঞান ও ইলেকট্রনিক্স",
+                },
                 { value: "phyq1423", text: "জীবন বাঁচাতে পদার্থ বিজ্ঞান" },
               ];
               for (let option of options) {
@@ -221,9 +225,7 @@
     <footer class="w3-center w3-black w3-padding-16 w3-bottom">
       <p>
         Powered by
-        <a href="/index.html" class="w3-hover-text-green url"
-          >Caution_Gamer.</a
-        >
+        <a href="/index.html" class="w3-hover-text-green url">Caution_Gamer.</a>
         ©
         <a
           target="_blank"
