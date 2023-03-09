@@ -180,12 +180,21 @@
             } else if (selectedValue === "bio") {
               subDropdown.disabled = false;
               const options = [
-                { value: "list2option1", text: "List 2 Option 1" },
-                { value: "list2option2", text: "List 2 Option 2" },
-                { value: "list2option3", text: "List 2 Option 3" },
-                { value: "list2option4", text: "List 2 Option 4" },
-                { value: "list2option5", text: "List 2 Option 5" },
-                { value: "list2option6", text: "List 2 Option 6" },
+              { value: "", text: "Select Chapter" },
+                { value: "bioq0123", text: "জীবন পাঠ" },
+                { value: "bioq0223", text: "জীবকোষ এবং টিস্যু" },
+                { value: "bioq0323", text: "কোষবিভাজন" },
+                { value: "bioq0423", text: "জীবনীশক্তি" },
+                { value: "bioq0523", text: "খাদ্য, পুষ্টি এবং পরিপাক" },
+                { value: "bioq0623", text: "জীবের পরিবহন" },
+                { value: "bioq0723", text: "গ্যাসীয় বিনিময়" },
+                { value: "bioq0823", text: "রেচন প্রক্রিয়া" },
+                { value: "bioq093", text: "দৃঢ়তা, প্রদান ও চলন" },
+                { value: "bioq1023", text: "সমন্বয়" },
+                { value: "bioq1123", text: "জীবের প্রজনন" },
+                { value: "bioq1223", text: "জীবের বংশগতি ও বিবর্তন" },
+                { value: "bioq1323", text: "জীবের পরিবেশ" },
+                { value: "bioq1423", text: "জীবপ্রযুক্তি" },
               ];
               for (let option of options) {
                 const optionElement = document.createElement("option");
