@@ -41,5 +41,14 @@ const navSlide = () => {
   
   navSlide();
 
+  function showSelected() {
+    var select = document.getElementById("mainDropdown");
+    var selectedOption = select.options[select.selectedIndex].value;
+    if (selectedOption !== "") {
+      select.options[0].disabled = true;
+    }
+  }
+
+
 
  
