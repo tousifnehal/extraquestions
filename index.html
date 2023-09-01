@@ -147,22 +147,22 @@
                 { value: "bn1q3123", text: "কাকতাড়ুয়া" },
                 { value: "bn1q3223", text: "বহিপীর" },
 
-                { value: "b1qcqu18", text: "Bangla 1st Model Test CQ 2018" },
-                { value: "b1qcqu19", text: "Bangla 1st Model Test CQ 2019" },
-                { value: "b1qcqu23", text: "Bangla 1st Model Test CQ 2023" },
+                { value: "bn1qcqu18", text: "Bangla 1st Model Test CQ 2018" },
+                { value: "bn1qcqu19", text: "Bangla 1st Model Test CQ 2019" },
+                { value: "bn1qcqu23", text: "Bangla 1st Model Test CQ 2023" },
 
 
-                { value: "b1qcqo18", text: "Bangla 1st Model Test MCQ 2018" },
-                { value: "b1qcqo19", text: "Bangla 1st Model Test MCQ 2019" },
-                { value: "b1qcqo23", text: "Bangla 1st Model Test MCQ 2023" },
+                { value: "bn1qcqo18", text: "Bangla 1st Model Test MCQ 2018" },
+                { value: "bn1qcqo19", text: "Bangla 1st Model Test MCQ 2019" },
+                { value: "bn1qcqo23", text: "Bangla 1st Model Test MCQ 2023" },
 
-                { value: "b1qmts18", text: "Bangla 1st Made Easy CQ 2018" },
-                { value: "b1qmts19", text: "Bangla 1st Made Easy CQ 2019" },
-                { value: "b1qmts23", text: "Bangla 1st Made Easy CQ 2023" },
+                { value: "bn1qmts18", text: "Bangla 1st Made Easy CQ 2018" },
+                { value: "bn1qmts19", text: "Bangla 1st Made Easy CQ 2019" },
+                { value: "bn1qmts23", text: "Bangla 1st Made Easy CQ 2023" },
 
-                { value: "b1qmto18", text: "Bangla 1st Made Easy MCQ 2018" },
-                { value: "b1qmto19", text: "Bangla 1st Made Easy MCQ 2019" },
-                { value: "b1qmto23", text: "Bangla 1st Made Easy MCQ 2023" },
+                { value: "bn1qmto18", text: "Bangla 1st Made Easy MCQ 2018" },
+                { value: "bn1qmto19", text: "Bangla 1st Made Easy MCQ 2019" },
+                { value: "bn1qmto23", text: "Bangla 1st Made Easy MCQ 2023" },
               ];
               for (let option of options) {
                 const optionElement = document.createElement("option");
@@ -331,11 +331,38 @@
 
           subDropdown.addEventListener("change", function () {
             const selectedValue = subDropdown.value;
-            let url = `https://panjeree.com/c09/${selectedValue}.pdf`;
-            window.open(url, "_blank");
-            setInterval(function () {
-              location.reload();
-            }, 2000);
+            if(selectedValue.toLowerCase().includes("cqu")){
+              let url = `https://panjeree.com/ssc/${selectedValue}.pdf`;
+              window.open(url, "_blank");
+              setInterval(function () {
+                location.reload();
+              }, 2000);
+            }else if(selectedValue.toLowerCase().includes("cqo")){
+              let url = `https://panjeree.com/ssc/${selectedValue}.pdf`;
+              window.open(url, "_blank");
+              setInterval(function () {
+                location.reload();
+              }, 2000);
+            }else if(selectedValue.toLowerCase().includes("mts")){
+              let url = `https://panjeree.com/ssc/${selectedValue}.pdf`;
+              window.open(url, "_blank");
+              setInterval(function () {
+                location.reload();
+              }, 2000);
+            }else if(selectedValue.toLowerCase().includes("mto")){
+              let url = `https://panjeree.com/ssc/${selectedValue}.pdf`;
+              window.open(url, "_blank");
+              setInterval(function () {
+                location.reload();
+              }, 2000);
+            }else {
+              let url = `https://panjeree.com/c09/${selectedValue}.pdf`;
+              window.open(url, "_blank");
+              setInterval(function () {
+                location.reload();
+              }, 2000);
+            }
+            
           });
         </script>
       </center>
